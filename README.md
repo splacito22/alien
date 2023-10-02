@@ -19,7 +19,12 @@ Ensure that saved events persist even after page refresh.
 
 # Links
 
+Github repo- https://github.com/splacito22/alien
+
 # Credits
+
+https://api.jquery.com/
+https://developer.mozilla.org/en-US/docs/Web/API
 
 # License
 
