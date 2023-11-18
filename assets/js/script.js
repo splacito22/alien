@@ -1,14 +1,12 @@
 $(function () {
   function saveEvent(hour, eventText) {
     localStorage.setItem("event-" + hour, eventText);
+    var eventText = localStorage.getItem("event-" + hour);
   }
 
   $(".saveBtn").on("click", function () {
     var eventId = $(this).closest(".time-block").attr("id");
     var eventText = $(this).siblings("textarea").val();
-
-    console.log("Event ID:", eventId);
-    console.log("Event Text:", eventText);
 
     saveEvent(eventId, eventText);
   });
