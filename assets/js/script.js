@@ -1,12 +1,17 @@
 $(function () {
-  //Variables
-  var startTime = 9;
-  var endTime = 17;
-  var container = $(".container-lg");
-
   function saveEvent(hour, eventText) {
     localStorage.setItem("event-" + hour, eventText);
   }
+
+  $(".saveBtn").on("click", function () {
+    var eventId = $(this).closest(".time-block").attr("id");
+    var eventText = $(this).siblings("textarea").val();
+
+    console.log("Event ID:", eventId);
+    console.log("Event Text:", eventText);
+
+    saveEvent(eventId, eventText);
+  });
   //Function to get any user input saved in local storage and set text area values
   function loadEvents() {
     $(".time-block").each(function () {
