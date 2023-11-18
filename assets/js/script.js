@@ -14,7 +14,7 @@ $(function () {
   function loadEvents() {
     $(".time-block").each(function () {
       var hour = $(this).attr("id").split("-")[1];
-      var eventText = localStorage.getItem("event-" + hour);
+      var eventText = localStorage.getItem("event-hour-" + hour);
 
       if (eventText) {
         $(this).find(".description").val(eventText);
